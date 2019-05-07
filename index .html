@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quote</title>
+</head>
+<body>
+	<div style='display:none;'>
+        <p class='quote-heading'>Поскольку мы все стремимся к счастью и, как оказалось, мы счастливы тогда, когда пользуемся вещами, причем пользуемся правильно, а правильность эту и благополучие дает нам знание, должно, по-видимому, всякому человеку изо всех сил стремиться стать как можно более мудрым.
+            <span class="author">-Сократ</span>
+        </p>
+        <p class='quote-heading'>Когда человек совершенствует то, что ему дано от природы, и использует это во благо других, он недалек от Истинного Пути. Не делайте то, что вам не нравится, по отношению к другим людям.
+            <span class="author">-Конфуций</span>
+        </p>
+        <p class='quote-heading'>Даже если в целом жизнь и лишена смысла, то, возможно, по этому поводу не стоит так уж сокрушаться. Наверное, мы можем признать это обстоятельство и просто жить, как жили. Вся штука в том, чтобы трезво смотреть на вещи и не терять почвы под ногами, и пусть оправданием жизни будет сама ваша жизнь и жизнь тех, с кем вас связала судьба. Если вы когда-либо спросите себя: „Какой вообще смысл жить?“ — будь вы студентом, барменом или кем бы то ни было, — вы ответите: „Никакого смысла. Если бы меня вообще не было или если бы все на свете мне было безразлично, это не имело бы никакого значения. Но я существую, и кое-что меня волнует. Только и всего. Это все, что можно сказать“.
+            <span class="author">-Томас Нагель</span>
+        </p>
+        <p class='quote-heading'>Вера человека в самого себя, именно в свою человечность и в свою свободу, способна делать людской род более ответственным за свою судьбу.
+            <span class="author">-Фродо Мэйнард</span>
+        </p>
+        <p class="quote-heading">Идейные побуждения — это костяк убежденности человека.
+            <span class="author">-Василий Сухомлинский</span>
+        </p>
+        <p class="quote-heading">Улыбка ничего не стоит, но дорого ценится.
+            <span class="author">-Дейл Карнеги</span>
+        </p>
+        <p class="quote-heading">Если захочется переделывать людей — начни с себя. Это и полезнее, и безопаснее.
+            <span class="author">-Дейла Карнеги</span>
+        </p>
+    </div>
+    <div class="quote">
+        <p id="test"></p>
+        <input type="submit" value="Следующая цитата" onclick='random();'>
+    </div>
+    
+<style>
+    .quote {
+        font-size: 20px;
+        font-family: sans-serif;
+        max-width: 600px;
+        margin:10px auto;
+        display:block;
+        border:2px solid green;
+        border-radius:5px;
+        padding:10px;
+        min-height:100px;
+    }input[type='submit']:hover {
+        background:#666;
+    }
+    input[type='submit']{
+        font-size: 20px;
+        font-family: sans-serif;
+        display:block;
+        position:relative;
+        left:65%;
+        margin-bottom:10px;
+        border-width:0;
+        border-radius:5px;
+        outline:none;
+        color:white;
+        background:#66B124;
+        padding:5px;
+    }
+    .author {
+        position: relative;
+        color:#A6192E;
+    }
+    </style>
+    <script>
+        function random(){
+        var sd=document.getElementsByClassName('quote-heading');
+        var res=Math.floor(Math.random()*(sd.length-0)+0);
+        newtext=sd[res].innerHTML;
+        var test=document.getElementById('test');
+        test.innerHTML=newtext;
+        }
+        random();
+    </script>
+</body>
+</html>
